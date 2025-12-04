@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>무대 ALT 서비스 | senstage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="img/sstglogo.ico" sizes="any">
+  <style>
+    /* Step2 기본 스타일 */
+    .stage-detail {
+      text-align: center;
+      margin-top: 80px;
+      padding: 60px 20px;
+      background: #faf9f8;
+      border-top: 1px solid rgba(0,0,0,.05);
+    }
+    .stage-detail img {
+      width: clamp(280px, 50vw, 640px);
+      border-radius: 16px;
+      transition: opacity .4s ease;
+    }
+    .stage-detail img.fade { opacity: 0; }
+    .stage-detail h3 {
+      font-size: 48px;
+      margin-top: 24px;
+      color: #551E15;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 네비게이션 -->
+  <div class="nav-wrap">
+    <header class="navbar" role="navigation" aria-label="상단 내비게이션">
+      <div class="navbar__inner">
+        <a class="logo" href="index.html">
+          <img src="img/index/logo.svg" alt="senstage" height="40" />
+        </a>
+  
+        <nav class="nav" aria-label="주 메뉴">
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="alt.html">무대 ALT 서비스</a></li>
+            <li class="menu__item"><a class="menu__link" href="haptic.html">햅틱 디바이스</a></li>
+            <li class="menu__item"><a class="menu__link" href="app.html">티켓 센스</a></li>
+  
+            <li class="menu__item dropdown">
+              <a href="brand_service.html" class="menu__btn" data-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+                브랜드 서비스
+                <span class="chev" aria-hidden="true">▾</span>
+              </a>
+              <div class="dropdown__panel" role="menu" aria-label="브랜드 서비스 하위메뉴">
+                <a role="menuitem" href="brand_vision.html" class="dropdown__link">브랜드 비전</a>
+                <a role="menuitem" href="brand_synesthesia.html" class="dropdown__link">시네스티아</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+<!-- Hero -->
+<section class="hero" style="background-image: url('img/alt/hero_alt.png');" role="banner" aria-label="무대 ALT 서비스 소개">
+  <div class="hero__inner">
+    <h1 class="hero__title">무대 ALT 서비스</h1>
+    <p class="hero__desc">
+      무대의 한 장면을 말로 풀어내는 그 순간, 우리는 서로의 감각을 나누기 시작합니다.<br>
+      당신의 문장이, 누군가에게는 공연의 모든 순간을 상상할 수 있게 해주는 길잡이가 됩니다.
+    </p>
+  </div>
+</section>
+
+<!-- Step 1: 무대 선택 -->
+<section class="stage-section" id="step1Section" aria-label="무대 선택">
+  <div class="stage-head">
+    <h2>Step 1. 무대 선택</h2>
+    <p>대체 텍스트 작성을 위해 원하는 무대를 선택해 주세요.</p>
+  </div>
+  <div class="carousel" id="stageCarousel">
+    <!-- 왼쪽 버튼 -->
+    <button class="nav-btn prev" aria-label="이전 카드">
+      <img src="img/alt/left.png" alt="이전">
+    </button>
+  
+    <!-- 카드 뷰포트 래퍼 추가 -->
+    <div class="carousel__viewport">
+      <ul class="track" aria-live="polite">
+        <li class="card" data-id="armageddon">
+          <div class="card__body">
+            <h3 class="card__title">WISH</h3>
+            <span class="card__meta">NCT WISH</span>
+            <p class="card__desc">SMTOWN LIVE 2024에서 펼쳐진 첫 데뷔 무대로, 불꽃 등의 다양한 효과와 알록달록한 조명 연출이 특징인 무대이다.</p>
+            <img class="card__img" src="img/alt/w4.png" alt="WISH 무대 이미지">
+          </div>
+        </li>
+  
+        <li class="card" data-id="feelmyrhythm">
+          <div class="card__body">
+            <h3 class="card__title">Feel My Rhythm</h3>
+            <span class="card__meta">Red Velvet</span>
+            <p class="card__desc">SMTOWN LIVE 2023 콘서트에서 펼쳐진 무대로, 시시각각 변화하는 조명 연출과 우아한 곡 분위기에 어울리는 부드러운 카메라 워크가 특징이다.</p>
+            <img class="card__img" src="img/alt/6.png" alt="Feel My Rhythm 무대 이미지">
+          </div>
+        </li>
+  
+        <li class="card" data-id="hug">
+          <div class="card__body">
+            <h3 class="card__title">Hug</h3>
+            <span class="card__meta">RIIZE</span>
+            <p class="card__desc">2025 SMTOWN 콘서트에서 펼친 무대로, 회전하며 돌아가는 무대 장치와 다양한 동선의 퍼포먼스가 특징인 무대이다.</p>
+            <img class="card__img" src="img/alt/r1.png" alt="Hug 무대 이미지">
+          </div>
+        </li>
+  
+        <li class="card" data-id="nextlevel">
+          <div class="card__body">
+            <h3 class="card__title">Armageddon</h3>
+            <span class="card__meta">aespa</span>
+            <p class="card__desc">2025 aespa LIVE TOUR 콘서트에서 펼친 무대로, 화려한 레이저 조명과 다수의 백업 댄서들과 함께해 풍성한 무대 연출과 구성이 특징이다.</p>
+            <img class="card__img" src="img/alt/a1.png" alt="Armageddon 무대 이미지">
+          </div>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- 오른쪽 버튼 -->
+    <button class="nav-btn next" aria-label="다음 카드">
+      <img src="img/alt/right.png" alt="다음">
+    </button>
+  </div>
+  
+  <!-- 무대 선택하기 버튼 -->
+  <div class="stage-select-btn-wrap">
+    <button class="stage-select-btn" id="stageSelectBtn" aria-label="무대 선택하기">
+      무대 선택하기
+    </button>
+  </div>
+</section>
+
+<!-- Step 2: 장면 선택 -->
+<section class="scene-section" id="sceneSection" aria-label="장면 선택" style="display: none;">
+  <div class="scene-head">
+    <h2>Step 2. 장면 선택</h2>
+    <p>무대 설명 대체 텍스트를 작성할 장면을 선택해 주세요.</p>
+  </div>
+
+  <!-- 필터 -->
+  <div class="scene-filter" role="tablist" aria-label="장면 카테고리">
+    <button class="pill is-active" role="tab" aria-selected="true" data-cat="all">전체</button>
+    <button class="pill" role="tab" aria-selected="false" data-cat="intro">도입부</button>
+    <button class="pill" role="tab" aria-selected="false" data-cat="verse1">1절 벌스</button>
+    <button class="pill" role="tab" aria-selected="false" data-cat="bridge">브릿지</button>
+    <button class="pill" role="tab" aria-selected="false" data-cat="verse2">2절 벌스</button>
+    <button class="pill" role="tab" aria-selected="false" data-cat="killing">킬링 파트</button>
+    <button class="pill" role="tab" aria-selected="false" data-cat="dancebreak">댄스 브레이크</button>
+    <button class="pill" role="tab" aria-selected="false" data-cat="ending">엔딩 요정</button>
+  </div>
+
+  <!-- 갤러리 -->
+  <div class="scene-grid" id="sceneGrid" aria-live="polite" aria-busy="false">
+    <!-- JS가 카드(썸네일) 채워 넣음 -->
+  </div>
+
+  <!-- 버튼 영역 -->
+  <div class="scene-btn-wrap">
+    <button class="scene-back-btn" id="sceneBackBtn" aria-label="무대 다시선택">
+      무대 다시선택
+    </button>
+    <button class="scene-confirm-btn" id="sceneConfirmBtn" aria-label="장면 확정하기">
+      장면 확정하기
+    </button>
+  </div>
+</section>
+
+<!-- 팝업 모달 -->
+<div class="popup-modal" id="popupModal" style="display: none;">
+  <div class="popup-modal__overlay"></div>
+  <div class="popup-modal__content">
+    <p class="popup-modal__text">원하는 장면의 이미지를 클릭하여 선택해 주세요.</p>
+    <button class="popup-modal__close" id="popupCloseBtn" aria-label="닫기">확인</button>
+  </div>
+</div>
+
+<!-- Step 3: 장면 정보 확인 -->
+<section class="step3" id="step3" style="display: none;">
+  <!-- 배경 (흐리고 무채색) -->
+  <div class="step3__bg" id="step3Bg" aria-hidden="true"></div>
+
+  <div class="step3__inner">
+    <header class="step3__head">
+      <h2>Step 3. 장면 정보 확인</h2>
+      <p>선택한 장면의 정보를 확인해 주세요.</p>
+    </header>
+
+    <article class="step3__card" id="step3Card">
+      <div class="step3__media">
+        <img id="step3Image" src="img/detail_default.jpg" alt="선택한 장면">
+      </div>
+
+      <div class="step3__content">
+        <h3 class="step3__title" id="step3Title">제목</h3>
+        <div class="step3__meta">
+          <span class="artist" id="step3Artist">아티스트</span>
+          <span class="chipwrap" id="step3Chips">
+            <!-- JS로 칩이 들어갑니다 -->
+          </span>
+        </div>
+        <p class="step3__desc" id="step3Desc">섹션 2에서 장면을 선택하면 여기 정보가 바뀝니다.</p>
+      </div>
+    </article>
+
+    <!-- Step 3 버튼 영역 -->
+    <div class="step3__btn-wrap">
+      <button class="step3-back-btn" id="step3BackBtn" aria-label="장면 다시선택">
+        장면 다시선택
+      </button>
+      <button class="step3-next-btn" id="step3NextBtn" aria-label="다음 단계">
+        다음 단계
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Step 4: 키워드 가이드 확인 -->
+<section class="step4" id="step4" style="display: none;">
+  <div class="step4__inner">
+    <header class="step4__head">
+      <h2>Step 4. 키워드 가이드 확인</h2>
+      <p>무대 대체 텍스트 작성을 위해 키워드 가이드라인을 확인해 주세요.</p>
+    </header>
+
+    <!-- 키워드 필터 버튼 -->
+    <div class="step4__filter" role="tablist" aria-label="키워드 카테고리">
+      <button class="step4__pill is-active" role="tab" aria-selected="true" data-keyword="timing">타이밍</button>
+      <button class="step4__pill" role="tab" aria-selected="false" data-keyword="action">동작</button>
+      <button class="step4__pill" role="tab" aria-selected="false" data-keyword="atmosphere">분위기</button>
+      <button class="step4__pill" role="tab" aria-selected="false" data-keyword="lighting">조명</button>
+      <button class="step4__pill" role="tab" aria-selected="false" data-keyword="member">멤버</button>
+    </div>
+
+    <!-- 키워드 가이드 텍스트 영역 -->
+    <div class="step4__text-area" id="step4TextArea">
+      <p id="step4Text">키워드를 선택하면 가이드라인이 표시됩니다.</p>
+    </div>
+
+    <!-- Step 4 다음 단계 버튼 -->
+    <div class="step4__btn-wrap">
+      <button class="step4-next-btn" id="step4NextBtn" aria-label="다음 단계">
+        다음 단계
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Step 5: 대체 텍스트 작성 -->
+<section class="step5" id="step5" style="display: none;">
+  <div class="step5__inner">
+    <header class="step5__head">
+      <h2>Step 5. 대체 텍스트 작성</h2>
+      <p>장면 정보와 키워드 가이드라인을 반영해 대체 텍스트를 작성해 주세요.</p>
+    </header>
+
+    <!-- 텍스트 입력 영역 -->
+    <div class="step5__input-area">
+      <textarea 
+        class="step5__textarea" 
+        id="step5Textarea" 
+        placeholder="이곳에 텍스트를 입력하세요."
+        rows="10"
+      ></textarea>
+    </div>
+
+    <!-- 버튼 영역 -->
+    <div class="step5__btn-wrap">
+      <button class="step5-guide-btn" id="step5GuideBtn" aria-label="가이드 다시보기">
+        가이드 다시보기
+      </button>
+      <button class="step5-complete-btn" id="step5CompleteBtn" aria-label="입력 완료">
+        입력 완료
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- JS: 캐러셀 + Step2 연동 -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.getElementById('stageCarousel');
+  const track = root.querySelector('.track');
+  const cards = Array.from(track.querySelectorAll('.card'));
+  const n = cards.length;
+  let index = 1; // 시작 중앙 카드
+
+  /* ---------- Step1 (기존) ---------- */
+  const detailImg = document.getElementById('detailImg');
+  const detailTitle = document.getElementById('detailTitle');
+
+  const stageData = {
+    armageddon: { img: 'img/detail_armageddon.jpg', title: 'aespa - Armageddon 무대 세부 장면' },
+    feelmyrhythm: { img: 'img/detail_fmr.jpg', title: 'Red Velvet - Feel My Rhythm 무대 세부 장면' },
+    hug: { img: 'img/detail_hug.jpg', title: 'RIIZE - Hug 무대 세부 장면' },
+    nextlevel: { img: 'img/detail_nextlevel.jpg', title: 'aespa - Next Level 무대 세부 장면' }
+  };
+
+  function updateDetail(centerCard) {
+    const id = centerCard.dataset.id;
+    const data = stageData[id];
+    if (data && detailImg && detailTitle) {
+      detailImg.src = data.img;
+      detailTitle.textContent = data.title;
+      detailImg.classList.add('fade');
+      setTimeout(() => detailImg.classList.remove('fade'), 400);
+    }
+  }
+
+  /* ---------- Step2 (장면 선택) ---------- */
+  const GALLERIES = {
+    armageddon: {
+      all: ["img/alt/a1.png","img/alt/a2.png","img/alt/a3.png","img/alt/a4.png","img/alt/a5.png","img/alt/a6.png"],
+      intro: ["img/alt/a1.png","img/alt/a2.png"],
+      verse1:["img/alt/a3.png"],
+      bridge:["img/alt/a4.png"],
+      verse2:["img/alt/a5.png"],
+      killing:["img/alt/a6.png"],
+      dancebreak:["img/alt/a4.png"],
+      ending:["img/alt/a2.png"]
+    },
+    feelmyrhythm: {
+      all: [
+        "img/alt/fmr/도입1.png","img/alt/fmr/도입2.png","img/alt/fmr/도입3.png",
+        "img/alt/fmr/1절벌스1.png","img/alt/fmr/1절벌스2.png","img/alt/fmr/1절벌스3.png",
+        "img/alt/fmr/브릿지1.png","img/alt/fmr/브릿지2.png","img/alt/fmr/브릿지3.png",
+        "img/alt/fmr/2절벌스.png","img/alt/fmr/2절벌스2.png","img/alt/fmr/2절벌스3.png",
+        "img/alt/fmr/킬링파트1.png","img/alt/fmr/킬링파트2.png","img/alt/fmr/킬링파트3.png",
+        "img/alt/fmr/댄스브레이크1.png","img/alt/fmr/댄스브레이크2.png","img/alt/fmr/댄스브레이크3.png",
+        "img/alt/fmr/엔딩요정1.png","img/alt/fmr/엔딩요정2.png","img/alt/fmr/엔딩요정3.png"
+      ],
+      intro:["img/alt/fmr/도입1.png","img/alt/fmr/도입2.png","img/alt/fmr/도입3.png"],
+      verse1:["img/alt/fmr/1절벌스1.png","img/alt/fmr/1절벌스2.png","img/alt/fmr/1절벌스3.png"],
+      bridge:["img/alt/fmr/브릿지1.png","img/alt/fmr/브릿지2.png","img/alt/fmr/브릿지3.png"],
+      verse2:["img/alt/fmr/2절벌스.png","img/alt/fmr/2절벌스2.png","img/alt/fmr/2절벌스3.png"],
+      killing:["img/alt/fmr/킬링파트1.png","img/alt/fmr/킬링파트2.png","img/alt/fmr/킬링파트3.png"],
+      dancebreak:["img/alt/fmr/댄스브레이크1.png","img/alt/fmr/댄스브레이크2.png","img/alt/fmr/댄스브레이크3.png"],
+      ending:["img/alt/fmr/엔딩요정1.png","img/alt/fmr/엔딩요정2.png","img/alt/fmr/엔딩요정3.png"]
+    },
+    hug: {
+      all:["img/alt/r1.png","img/alt/r2.png","img/alt/r3.png","img/alt/r4.png","img/alt/r5.png","img/alt/r6.png"],
+      intro:["img/alt/r1.png"],
+      verse1:["img/alt/r2.png","img/alt/r3.png"],
+      bridge:["img/alt/r4.png"],
+      verse2:["img/alt/r5.png"],
+      killing:["img/alt/r3.png"],
+      dancebreak:["img/alt/r4.png"],
+      ending:["img/alt/r6.png"]
+    },
+    nextlevel: {
+      all:["img/alt/n1.png","img/alt/n2.png","img/alt/n3.png","img/alt/n4.png","img/alt/n5.png","img/alt/n6.png"],
+      intro:["img/alt/n1.png"],
+      verse1:["img/alt/n2.png","img/alt/n3.png"],
+      bridge:["img/alt/n4.png"],
+      verse2:["img/alt/n5.png"],
+      killing:["img/alt/n3.png"],
+      dancebreak:["img/alt/n4.png"],
+      ending:["img/alt/n6.png"]
+    }
+  };
+
+  const sceneGrid = document.getElementById('sceneGrid');
+  const filterWrap = document.querySelector('.scene-filter');
+  let currentStage = 'feelmyrhythm';
+  let currentCat = 'all';
+
+  // 무대 정보 매핑
+  const stageInfo = {
+    armageddon: { title: 'WISH', artist: 'NCT WISH' },
+    feelmyrhythm: { title: 'Feel My Rhythm', artist: 'Red Velvet' },
+    hug: { title: 'Hug', artist: 'RIIZE' },
+    nextlevel: { title: 'Armageddon', artist: 'aespa' }
+  };
+
+  // Feel My Rhythm 이미지 설명 매핑
+  const imageDescriptions = {
+    'img/alt/fmr/도입1.png': '영상의 첫 장면으로, 조명이 켜지고, <br>멤버 아이린이 준비 동작을 하고 있다.',
+    'img/alt/fmr/도입2.png': '좌측에서 우측으로 움직이는 카메라를 따라 <br>멤버 웬디가 등장한다.',
+    'img/alt/fmr/도입3.png': '멤버 웬디가 슬기에게 다가가 페어 안무를 하고 있다.',
+    'img/alt/fmr/1절벌스1.png': '좌측부터 멤버 슬기, 조이, 아이린, 예리, 웬디가 <br>사선으로 서있으며, 카메라가 슬기의 앞에서 촬영하고 있다.',
+    'img/alt/fmr/1절벌스2.png': '좌측부터 멤버 슬기, 조이, 아이린, 예리, 웬디가 <br>사선으로 서있으며, 카메라가 중앙으로 이동하여 촬영하고 있다.',
+    'img/alt/fmr/1절벌스3.png': '멤버 아이린이 센터에 서있다.',
+    'img/alt/fmr/브릿지1.png': '좌측부터 멤버 아이린, 조이, 웬디가 서있다.',
+    'img/alt/fmr/브릿지2.png': '좌측부터 멤버 조이, 아이린, 웬디가 서있으며, <br>무대를 사선 방향으로 바라보고 있다.',
+    'img/alt/fmr/브릿지3.png': '좌측부터 멤버 슬기, 예리, 웬디가 서있다.',
+    'img/alt/fmr/2절벌스.png': '좌측부터 멤버 아이린, 웬디, 조이, 예리, 슬기가 <br>알파벳 M 형태로 무대 위에 서있으며, <br>여러명의 백업 댄서가 배경을 채우고 있다.',
+    'img/alt/fmr/2절벌스2.png': '멤버 조이가 무대의 중앙에서 춤을 추고 있다.',
+    'img/alt/fmr/2절벌스3.png': '좌우로 나란히 서있던 멤버들이 <br>가장 앞에 있는 웬디를 중심으로 교차하는 동선을 진행하고 있다.',
+    'img/alt/fmr/킬링파트1.png': '좌측부터 멤버 예리, 아이린, 조이, 웬디, 슬기가 <br>알파벳 V의 형태로 구성을 이루고 있다.',
+    'img/alt/fmr/킬링파트2.png': '좌측부터 멤버 예리, 아이린, 조이, 웬디, 슬기가 <br>알파벳 V의 형태로 구성을 이루고 있다.',
+    'img/alt/fmr/킬링파트3.png': '멤버 웬디가 무대의 중앙에 서있다.',
+    'img/alt/fmr/댄스브레이크1.png': '멤버 웬디를 중심으로 좌측에 예리와 아이린, <br>우측에 슬기와 조이가 알파벳 X형태의 구성을 이루고 있다.',
+    'img/alt/fmr/댄스브레이크2.png': '좌측부터 멤버 아이린, 예리, 웬디, 슬기, 조이가 <br>나란히 서있다.',
+    'img/alt/fmr/댄스브레이크3.png': '좌측부터 멤버 웬디, 슬기, 조이가 서있으며, <br>그 뒤로는 백업 댄서들이 안무를 하고 있다.',
+    'img/alt/fmr/엔딩요정1.png': '좌측부터 멤버 웬디, 조이, 아이린, 슬기, 예리가 서있다.',
+    'img/alt/fmr/엔딩요정2.png': '좌측부터 멤버 웬디, 조이, 아이린, 슬기, 예리가 서있다.',
+    'img/alt/fmr/엔딩요정3.png': '멤버 아이린이 중앙으로 걸어나오고 있다.'
+  };
+
+  // 카테고리 이름 매핑
+  const categoryNames = {
+    all: '전체',
+    intro: '도입부',
+    verse1: '1절 벌스',
+    bridge: '브릿지',
+    verse2: '2절 벌스',
+    killing: '킬링 파트',
+    dancebreak: '댄스 브레이크',
+    ending: '엔딩 요정'
+  };
+
+  function renderSceneGrid(stageId, cat){
+    const data = (GALLERIES[stageId] || {});
+    const list = data[cat] || data.all || [];
+    sceneGrid.setAttribute('aria-busy','true');
+
+    if(!list.length){
+      sceneGrid.innerHTML = `<div style="grid-column:1/-1; color:rgba(255,255,255,.7); text-align:center; padding:24px 0;">이미지를 준비 중입니다.</div>`;
+      sceneGrid.setAttribute('aria-busy','false');
+      return;
+    }
+
+    sceneGrid.innerHTML = list.map((src,i)=>`
+      <a class="scene-card" href="#" data-index="${i}" data-img="${src}" data-stage="${stageId}" data-cat="${cat}" aria-label="장면 ${i+1}">
+        <img class="scene-thumb" src="${src}" alt="장면 썸네일 ${i+1}">
+      </a>
+    `).join('');
+
+    sceneGrid.setAttribute('aria-busy','false');
+  }
+
+  function updateScene(stageId){
+    currentStage = stageId;
+    currentCat = 'all';
+    filterWrap.querySelectorAll('.pill').forEach(b=>{
+      const on = b.dataset.cat === 'all';
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    renderSceneGrid(currentStage, currentCat);
+  }
+
+  filterWrap.addEventListener('click',(e)=>{
+    const btn = e.target.closest('[data-cat]');
+    if(!btn) return;
+    filterWrap.querySelectorAll('.pill').forEach(b=>{
+      b.classList.toggle('is-active', b===btn);
+      b.setAttribute('aria-selected', b===btn ? 'true' : 'false');
+    });
+    currentCat = btn.dataset.cat;
+    renderSceneGrid(currentStage, currentCat);
+  });
+
+  // 선택한 장면 정보 저장 (Step 4에서 사용) - 전역 변수로 선언
+  window.selectedSceneData = null;
+
+  // Step 2 장면 클릭 시 Step 3 업데이트
+  sceneGrid.addEventListener('click', (e)=>{
+    const card = e.target.closest('.scene-card');
+    if(!card) return;
+    e.preventDefault();
+    
+    // 모든 카드에서 선택 상태 제거
+    sceneGrid.querySelectorAll('.scene-card').forEach(c => {
+      c.classList.remove('is-selected');
+    });
+    
+    // 클릭한 카드에 선택 상태 추가
+    card.classList.add('is-selected');
+    
+    const imgSrc = card.dataset.img;
+    const stageId = card.dataset.stage;
+    const cat = card.dataset.cat;
+    const stage = stageInfo[stageId] || { title: '', artist: '' };
+    
+    // 칩 배열 생성
+    const chips = [];
+    if(cat && cat !== 'all'){
+      chips.push(categoryNames[cat] || cat);
+    }
+    chips.push(`장면 #${parseInt(card.dataset.index) + 1}`);
+    
+    // 선택한 장면 정보 저장
+    window.selectedSceneData = {
+      img: imgSrc,
+      stageId: stageId,
+      cat: cat,
+      index: parseInt(card.dataset.index)
+    };
+    
+    // 이미지 설명 가져오기
+    let imageDesc = '선택한 장면의 상세 정보입니다.';
+    if (stageId === 'feelmyrhythm' && imageDescriptions[imgSrc]) {
+      imageDesc = imageDescriptions[imgSrc];
+    }
+    
+    // updateStep3 함수 호출 (전역 함수) - Step 3 업데이트만 하고 스크롤은 하지 않음
+    if(typeof updateStep3 === 'function'){
+      updateStep3({
+        img: imgSrc,
+        title: stage.title || '',
+        artist: stage.artist || '',
+        chips: chips,
+        desc: imageDesc
+      });
+    }
+  });
+
+  /* ---------- 캐러셀 로직 ---------- */
+  function modOffset(i, center){
+    const half = Math.floor(n / 2);
+    let d = i - center;
+    if (d > half) d -= n;
+    if (d < -half) d += n;
+    return d;
+  }
+
+  function layout(){
+    cards.forEach((card, i)=>{
+      const off = modOffset(i, index);
+      card.style.setProperty('--offset', off);
+      card.classList.toggle('is-center', off === 0);
+
+      if (Math.abs(off) <= 1) {
+        card.style.visibility = 'visible';
+        card.style.pointerEvents = 'auto';
+        card.style.opacity = '1';
+      } else {
+        card.style.visibility = 'hidden';
+        card.style.pointerEvents = 'none';
+        card.style.opacity = '0';
+      }
+
+      if (off === 0){
+        updateDetail(card);
+        updateScene(card.dataset.id); // 섹션2와 연동
+      }
+    });
+  }
+
+  function prev(){ 
+    // Step 2가 표시되어 있으면 숨기기
+    const sceneSection = document.getElementById('sceneSection');
+    if (sceneSection && sceneSection.style.display !== 'none') {
+      sceneSection.style.display = 'none';
+      window.shouldHideStep2 = true;
+    }
+    // Step 3이 표시되어 있으면 숨기기
+    const step3Section = document.getElementById('step3');
+    if (step3Section && step3Section.style.display !== 'none') {
+      step3Section.style.display = 'none';
+    }
+    index = (index - 1 + n) % n; 
+    layout(); 
+  }
+  function next(){ 
+    // Step 2가 표시되어 있으면 숨기기
+    const sceneSection = document.getElementById('sceneSection');
+    if (sceneSection && sceneSection.style.display !== 'none') {
+      sceneSection.style.display = 'none';
+      window.shouldHideStep2 = true;
+    }
+    // Step 3이 표시되어 있으면 숨기기
+    const step3Section = document.getElementById('step3');
+    if (step3Section && step3Section.style.display !== 'none') {
+      step3Section.style.display = 'none';
+    }
+    index = (index + 1) % n; 
+    layout(); 
+  }
+
+  root.querySelector('.prev').addEventListener('click', prev);
+  root.querySelector('.next').addEventListener('click', next);
+  cards.forEach((card,i)=>card.addEventListener('click',()=>{ 
+    // Step 2가 표시되어 있으면 숨기기
+    const sceneSection = document.getElementById('sceneSection');
+    if (sceneSection && sceneSection.style.display !== 'none') {
+      sceneSection.style.display = 'none';
+      window.shouldHideStep2 = true;
+    }
+    // Step 3이 표시되어 있으면 숨기기
+    const step3Section = document.getElementById('step3');
+    if (step3Section && step3Section.style.display !== 'none') {
+      step3Section.style.display = 'none';
+    }
+    index=i; 
+    layout(); 
+  }));
+
+  root.addEventListener('keydown',(e)=>{
+    if (e.key==='ArrowLeft') prev();
+    if (e.key==='ArrowRight') next();
+  });
+  root.tabIndex = 0;
+
+  layout();
+});
+</script>
+
+
+<!-- 드롭다운 메뉴 -->
+<script>
+const dropdowns = document.querySelectorAll('.dropdown');
+function closeAll(except){
+  dropdowns.forEach(dd=>{
+    if(dd !== except){
+      dd.classList.remove('is-open');
+      const btn = dd.querySelector('[data-dropdown-toggle]');
+      if(btn) btn.setAttribute('aria-expanded','false');
+    }
+  });
+}
+dropdowns.forEach(dd=>{
+  const btn = dd.querySelector('[data-dropdown-toggle]');
+  const panel = dd.querySelector('.dropdown__panel');
+  if(!btn || !panel) return;
+
+  btn.addEventListener('click',(e)=>{
+    const isOpen = dd.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+    if(isOpen){
+      closeAll(dd);
+      setTimeout(()=>{
+        const first = panel.querySelector('a, button');
+        if(first) first.focus();
+      },0);
+    }
+  });
+
+  dd.addEventListener('keydown',(e)=>{
+    if(e.key==='Escape'){
+      dd.classList.remove('is-open');
+      btn.setAttribute('aria-expanded','false');
+      btn.focus();
+    }
+  });
+});
+document.addEventListener('click',(e)=>{
+  const trigger = e.target.closest('.dropdown');
+  if(!trigger) closeAll();
+});
+</script>
+<script>
+  /* 섹션3 업데이트 함수 (어디서든 부르면 섹션3이 갱신됨) */
+  function updateStep3(data){
+    if(!data) return;
+    const bg   = document.getElementById('step3Bg');
+    const img  = document.getElementById('step3Image');
+    const ttl  = document.getElementById('step3Title');
+    const art  = document.getElementById('step3Artist');
+    const desc = document.getElementById('step3Desc');
+    const chipsWrap = document.getElementById('step3Chips');
+  
+    // 배경/카드 이미지
+    if(bg)  bg.style.backgroundImage = `url('${data.img}')`;
+    if(img) img.src = data.img;
+  
+    // 텍스트
+    if(ttl)  ttl.textContent  = data.title || '';
+    if(art)  art.textContent  = data.artist || '';
+    if(desc) desc.innerHTML = data.desc || '';
+  
+    // 칩들 렌더링
+    if(chipsWrap){
+      chipsWrap.innerHTML = '';
+      (data.chips || []).forEach(txt=>{
+        const span = document.createElement('span');
+        span.className = 'chip';
+        span.textContent = txt.trim();
+        chipsWrap.appendChild(span);
+      });
+    }
+    
+    // 선택된 장면 데이터 업데이트 (Step 4에서 사용)
+    if (data.img) {
+      if (!window.selectedSceneData) {
+        window.selectedSceneData = {};
+      }
+      window.selectedSceneData.img = data.img;
+    }
+  }
+  
+  /* 초기값 설정은 Step 2에서 장면을 선택할 때 자동으로 Step 3이 업데이트됨 */
+  </script>
+
+<script>
+  /* Step 1 무대 선택하기 버튼 클릭 시 Step 2로 스크롤 */
+  document.addEventListener('DOMContentLoaded', () => {
+    const stageSelectBtn = document.getElementById('stageSelectBtn');
+    const sceneSection = document.getElementById('sceneSection');
+    const popupModal = document.getElementById('popupModal');
+    const popupModalText = popupModal ? popupModal.querySelector('.popup-modal__text') : null;
+    const popupCloseBtn = document.getElementById('popupCloseBtn');
+    
+    // Step 2가 자동으로 표시되지 않도록 하는 플래그 초기화
+    window.shouldHideStep2 = false;
+    
+    if (stageSelectBtn && sceneSection) {
+      stageSelectBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // 현재 중앙 카드 확인
+        const centerCard = document.querySelector('.card.is-center');
+        const currentStageId = centerCard ? centerCard.dataset.id : null;
+        
+        // Feel My Rhythm이 아니면 팝업 표시
+        if (currentStageId !== 'feelmyrhythm') {
+          if (popupModal && popupModalText) {
+            popupModalText.textContent = '서비스 준비 중입니다.';
+            popupModal.style.display = 'flex';
+          }
+          return;
+        }
+        
+        // Feel My Rhythm이면 Step 2 표시
+        sceneSection.style.display = 'block';
+        // 플래그 리셋 (Step 2가 정상적으로 표시되도록)
+        window.shouldHideStep2 = false;
+        // Step 2로 스크롤
+        setTimeout(() => {
+          sceneSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }, 100);
+      });
+    }
+    
+    // 팝업 닫기 버튼 (Step 1에서도 사용)
+    if (popupCloseBtn && popupModal) {
+      popupCloseBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        popupModal.style.display = 'none';
+      });
+    }
+    
+    // 팝업 오버레이 클릭 시 닫기 (Step 1에서도 사용)
+    if (popupModal) {
+      const overlay = popupModal.querySelector('.popup-modal__overlay');
+      if (overlay) {
+        overlay.addEventListener('click', () => {
+          popupModal.style.display = 'none';
+        });
+      }
+    }
+
+    /* Step 2 무대 다시선택 버튼 클릭 시 Step 1로 스크롤 및 Step 2 숨기기 */
+    const backBtn = document.getElementById('sceneBackBtn');
+    const step1Section = document.getElementById('step1Section');
+    
+    if (backBtn && step1Section && sceneSection) {
+      backBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Step 2 숨기기
+        sceneSection.style.display = 'none';
+        // 플래그 설정 (다른 카드 선택 시 Step 2가 자동으로 표시되지 않도록)
+        window.shouldHideStep2 = true;
+        step1Section.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      });
+    }
+
+    /* Step 2 장면 확정하기 버튼 클릭 시 Step 3 표시 및 스크롤 */
+    const confirmBtn = document.getElementById('sceneConfirmBtn');
+    const step3Section = document.getElementById('step3');
+    
+    // Step 2에서만 팝업이 나타나도록 보장
+    if (confirmBtn && step3Section && popupModal) {
+      confirmBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Step 2 섹션 내에서 선택된 장면이 있는지 확인
+        const sceneSection = document.getElementById('sceneSection');
+        const selectedCard = sceneSection ? sceneSection.querySelector('.scene-card.is-selected') : null;
+        
+        if (!selectedCard) {
+          // 선택된 장면이 없으면 팝업 표시 (Step 2에서만)
+          if (popupModalText) {
+            popupModalText.textContent = '원하는 장면의 이미지를 클릭하여 선택해 주세요.';
+          }
+          popupModal.style.display = 'flex';
+          return;
+        }
+        
+        // 선택된 장면이 있으면 팝업을 닫고 Step 3 표시
+        popupModal.style.display = 'none';
+        step3Section.style.display = 'block';
+        // Step 3로 스크롤
+        setTimeout(() => {
+          step3Section.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }, 100);
+      });
+    }
+
+
+    /* Step 3 장면 다시선택 버튼 클릭 시 Step 2로 스크롤 */
+    const step3BackBtn = document.getElementById('step3BackBtn');
+    
+    if (step3BackBtn && sceneSection) {
+      step3BackBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        sceneSection.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      });
+    }
+
+    /* Step 3 다음 단계 버튼 클릭 시 Step 4 표시 및 스크롤 */
+    const step3NextBtn = document.getElementById('step3NextBtn');
+    const step4Section = document.getElementById('step4');
+    
+    if (step3NextBtn && step4Section) {
+      step3NextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Step 4 표시
+        step4Section.style.display = 'block';
+        // Step 4로 스크롤
+        setTimeout(() => {
+          step4Section.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+          // Step 4가 표시된 후 초기 키워드 텍스트 업데이트
+          if (typeof updateKeywordText === 'function') {
+            updateKeywordText('timing');
+          }
+        }, 100);
+      });
+    }
+  });
+</script>
+
+<script>
+  /* Step 4 키워드 가이드 텍스트 데이터 */
+  // Step 2에서 선택한 이미지에 따라 텍스트가 바뀜
+  // 이미지 경로를 키로 사용하여 각 이미지별 키워드 가이드 매핑
+  const keywordGuides = {
+    // 도입부1
+    'img/alt/fmr/도입1.png': {
+      timing: '음악과 무대영상이 시작되는 순간이다.',
+      action: '손등이 바깥으로 보이도록 두 손을 포개고 있다.',
+      atmosphere: '동작은 차분하고, 음악은 천천히 흘러간다.',
+      lighting: '암전 되어있던 조명이 서서히 점등된다.',
+      member: '아이린이 무대 중앙에 서있다.'
+    },
+    // 도입부2
+    'img/alt/fmr/도입2.png': {
+      timing: '카메라가 멤버 아이린을 넘어 웬디를 비추고 있다.',
+      action: '손등이 바깥으로 보이도록 두 손을 포개고 있다.',
+      atmosphere: '점점 밝아진다.',
+      lighting: '봄을 연상하는 분홍색 배경에 차분함을 더하는 푸른빛 조명이 비춰지고 있다.',
+      member: '웬디를 중심으로 좌측에는 슬기와 아이린이 보인다.'
+    },
+    // 도입부3
+    'img/alt/fmr/도입3.png': {
+      timing: '멤버 웬디의 짧은 독무 이후에 시작하는 페어 안무이다.',
+      action: '멤버 웬디와 슬기가 서로를 교차하며 앞으로 돌아 카메라를 바라본다.',
+      atmosphere: '점점 밝아진다.',
+      lighting: '봄을 연상하는 분홍색 배경에 <br>차분함을 더하는 푸른빛 조명이 비춰지고 있다.',
+      member: '멤버 웬디와 슬기가 무대의 우측에 위치하고 있다.'
+    },
+    // 1절벌스1
+    'img/alt/fmr/1절벌스1.png': {
+      timing: '곡의 도입부를 지난 직후의 상황이다.',
+      action: '손바닥이 하늘을 보이게 두고, <br>왼팔을 위로, 오른팔은 아래로 둔다.',
+      atmosphere: '무도회가 시작된 순간과 같이 설레이고 신나는 느낌이다.',
+      lighting: '봄을 연상하는 분홍색 배경에 <br>차분함을 더하는 푸른빛 조명이 비춰지고 있다.',
+      member: '좌측부터 슬기, 조이, 아이린, 예리, 웬디가 서있다.'
+    },
+    // 1절벌스2
+    'img/alt/fmr/1절벌스2.png': {
+      timing: '사선으로 촬영하던 카메라가 무대의 중앙으로 옮겨 왔다.',
+      action: '손바닥이 하늘을 보이게 두고, 양 팔을 윗쪽으로 쭉 뻗고 있으며, <br>다리는 좌측 방향의 상태로 무릎을 살짝 굽히고 있다.',
+      atmosphere: '신나는 곡의 분위기를 이어간다.',
+      lighting: '멤버들의 뒤에서 조명을 강하게 비춰 역광의 느낌을 연출한다.',
+      member: '좌측부터 슬기, 조이, 아이린, 예리, 웬디가 서있다.'
+    },
+    // 1절벌스3
+    'img/alt/fmr/1절벌스3.png': {
+      timing: '좌우로 흩어진 멤버들 사이로 아이린이 걸어 나오고 있다.',
+      action: '팔을 내린 상태로 카메라를 응시하며 천천히 걸어 나온다.',
+      atmosphere: '밝지만 약간의 긴장감이 있다.',
+      lighting: '밝고 따뜻한 분홍색의 배경 빛이 비춰진다.',
+      member: '아이린이 중앙에 걸어 나온다.'
+    },
+    // 브릿지1
+    'img/alt/fmr/브릿지1.png': {
+      timing: '1절이 끝난 뒤 곡의 분위기를 전환하는 구간이다.',
+      action: '한 손은 귀에 얹고, 다른 한 팔은 \'ㄱ\'자로 꺾어<br>손등이 하늘을 보이게 한 상태로 중지에 힘을 싣는다.',
+      atmosphere: '살랑이던 분위기에서 빠르고 더욱 신나는 분위기로 전환된다.',
+      lighting: '어두운 조명과 교차하여 깜빡이다가 밝은 조명으로 바뀐다.',
+      member: '좌측부터 아이린, 조이, 웬디가 서있다.'
+    },
+    // 브릿지2
+    'img/alt/fmr/브릿지2.png': {
+      timing: '1절이 끝난 뒤 곡의 분위기를 전환하는 구간이다.',
+      action: '양옆의 멤버는 주먹을 쥔 채 팔을 허리 밑으로 내리고 있고,<br>중앙의 멤버는 검지 손가락만 편 상태에서 양팔을 위로 올린다.',
+      atmosphere: '살랑이던 분위기에서 빠르고 더욱 신나는 분위기로 전환된다.',
+      lighting: '밝은 배경에서 벗어나 푸른 조명이 비춰지며 살짝 어둡다.',
+      member: '좌측부터 조이, 아이린, 웬디가 서있다.'
+    },
+    // 브릿지3
+    'img/alt/fmr/브릿지3.png': {
+      timing: '무대 위에 웬디를 제외한 멤버가 교체되며 춤을 춘다.',
+      action: '좌측에 있는 멤버는 검지 손가락만 펼친 상태로 양팔을 위로 올리고 있고, <br> 우측의 두 멤버는 골반에 손을 얹은 상태로 양 다리를 교차하고 있다.',
+      atmosphere: '살랑이던 분위기에서 빠르고 더욱 신나는 분위기로 전환된다.',
+      lighting: '어둡고 푸른 조명이 무대를 비추고 있다.',
+      member: '좌측부터 슬기, 예리, 웬디가 서있다.'
+    },
+    // 2절벌스1
+    'img/alt/fmr/2절벌스.png': {
+      timing: '멤버 다섯명이 모두 무대로 모이며,<br>그 뒤로는 백업 댄서들이 나타난다.',
+      action: '한쪽 무릎을 굽힌 상태로, 양 손은 골반 위에 얹고 있다가<br> 한 팔씩 볼 옆으로 올려 손가락을 섬세히 움직인다.',
+      atmosphere: '곡의 템포가 점점 느슨해진다.',
+      lighting: '밝은 조명이 무대를 비추고 있다.',
+      member: '좌측부터 아이린, 웬디, 조이, 예리, 슬기가 서있다.'
+    },
+    // 2절벌스2
+    'img/alt/fmr/2절벌스2.png': {
+      timing: '카메라가 무대 중앙에 있는 멤버에게 다가간다.',
+      action: '오른팔은 손목을 꺾어 턱 가까이에 가져다 대고,<br>나머지 한 팔로는 오른팔의 팔꿈치를 팔짱을 끼듯이 받친다.',
+      atmosphere: '곡의 템포가 점점 느슨해진다.',
+      lighting: '밝은 조명이 무대를 비추고 있다.',
+      member: '좌측부터 웬디, 조이, 예리가 서있다.'
+    },
+    // 2절벌스3
+    'img/alt/fmr/2절벌스3.png': {
+      timing: '멤버들이 모두 중앙으로 모였다가 흩어진다.',
+      action: '\'ㄱ\'자로 꺾은 두 팔을 교차했다가 허리 밑으로 내린다.',
+      atmosphere: '곡의 템포가 점점 느슨해진다.',
+      lighting: '밝은 조명이 무대를 비추고 있다.',
+      member: '좌측에는 예리, 조이, 우측에는 아이린, 슬기가 멤버 웬디를 중심으로 동선을 교차 중이다.'
+    },
+    // 킬링파트1
+    'img/alt/fmr/킬링파트1.png': {
+      timing: '후렴에 들어가기 전, 분위기를 밝히는 구간이다.',
+      action: '한쪽 팔은 아래로 쭉 뻗어 고정하고, 나머지 한쪽 팔로는<br> 펼친 손바닥의 손가락으로 양 볼을 만진다.',
+      atmosphere: '봄처럼 살랑이는 분위기이다.',
+      lighting: '밝은 조명이 무대를 비추고 있다.',
+      member: '좌측부터 아이린, 조이, 웬디가 서있다.'
+    },
+    // 킬링파트2
+    'img/alt/fmr/킬링파트2.png': {
+      timing: '후렴에 들어가기 전, 분위기를 밝히는 구간이다.',
+      action: '한쪽 팔은 아래로 쭉 뻗어 고정하고, 나머지 한쪽 팔로는<br> 주먹을 쥔 상태에서 검지 손가락만 펼쳐 회전한다.<br> 이와 동시에 고개를 우, 앞, 좌, 뒤 순으로 뻗어 굴린다.',
+      atmosphere: '봄처럼 살랑이는 분위기이다.',
+      lighting: '밝은 조명이 무대를 비추고 있다.',
+      member: '좌측부터 아이린, 조이, 웬디가 서있다.'
+    },
+    // 킬링파트3
+    'img/alt/fmr/킬링파트3.png': {
+      timing: '후렴에 들어가기 전, 분위기를 밝히는 구간이다.',
+      action: '양팔을 사선 방향으로 교차하여, 어깨와 허리에 손을 얹는다.',
+      atmosphere: '봄처럼 살랑이는 분위기이다.',
+      lighting: '밝은 조명이 무대를 비추고 있다.',
+      member: '웬디가 중앙에 서있다.'
+    },
+    // 댄스브레이크1
+    'img/alt/fmr/댄스브레이크1.png': {
+      timing: '곡의 하이라이트로 접어드는 구간이다.',
+      action: '바깥쪽에 위치한 팔을 위에서부터 아래로 둥글게 펼쳐 내린다.',
+      atmosphere: '서정적이고 느린 템포로 흘러간다.',
+      lighting: '어두운 배경에 밝은 조명이 멤버들의 뒤에서 강하게 비춘다.',
+      member: '중심에는 웬디, 좌측에는 예리와 아이린, 우측에는 슬기와 조이가 서있다.'
+    },
+    // 댄스브레이크2
+    'img/alt/fmr/댄스브레이크2.png': {
+      timing: '곡의 하이라이트로 접어드는 구간이다.',
+      action: '양쪽 팔을 좌측으로 쭉 뻗어 옆의 멤버와 팔을 포갠다.',
+      atmosphere: '서정적이고 느린 템포로 흘러간다.',
+      lighting: '어두운 배경에 밝은 조명이 멤버들의 뒤에서 강하게 비춘다.',
+      member: '좌측부터 아이린, 예리, 웬디, 슬기, 조이가 서있다.'
+    },
+    // 댄스브레이크3
+    'img/alt/fmr/댄스브레이크3.png': {
+      timing: '곡의 하이라이트로 접어드는 구간이다.',
+      action: '양팔을 위로 둥글게 뻗은 뒤, <br>손바닥이 하늘을 향한 채로 두 손을 포갠다.',
+      atmosphere: '서정적이지만 빠른 템포로 흘러간다.',
+      lighting: '조명이 점점 밝아진다.',
+      member: '좌측부터 웬디, 슬기, 조이가 서있다.'
+    },
+    // 엔딩요정1
+    'img/alt/fmr/엔딩요정1.png': {
+      timing: '카메라가 줌아웃 되며, 곡이 완전히 마무리되는 구간이다.',
+      action: '두 다리에 간격을 준 상태로, 한쪽 다리에 무게 중심을 싣는다.<br> 동시에 팔은 자유롭게 위로 펼쳤다가 내린다.',
+      atmosphere: '밝고 신나는 곡이 마무리되며 여운이 남는다.',
+      lighting: '중간 조도의 조명이 비춰지고, 배경은 점차 어두워진다.',
+      member: '좌측부터 웬디, 조이, 아이린, 슬기, 예리가 서있다.'
+    },
+    // 엔딩요정2
+    'img/alt/fmr/엔딩요정2.png': {
+      timing: '카메라가 줌아웃 되며, 곡이 완전히 마무리되는 구간이다.',
+      action: '두 다리에 간격을 준 상태로, 한쪽 다리에 무게 중심을 싣는다.<br> 동시에 팔은 허리 밑으로 사뿐히 내린다.',
+      atmosphere: '점점 무겁고 조용해진다.',
+      lighting: '배경 조명이 꺼진 뒤 서서히 메인 조명까지 암전된다.',
+      member: '좌측부터 웬디, 조이, 아이린, 슬기, 예리가 서있다.'
+    },
+    // 엔딩요정3
+    'img/alt/fmr/엔딩요정3.png': {
+      timing: '곡의 마무리를 향해 흘러가고 있다.',
+      action: '한쪽 팔은 수직으로 뻗어 귀 가까이에 붙이고,<br> 나머지 한 팔은 수평으로 뻗는다.',
+      atmosphere: '점점 어두워진다.',
+      lighting: '밝은 조명과 배경이 멤버를 비추고 있다.',
+      member: '아이린이 중앙에 서있다.'
+    }
+  };
+
+  // 현재 선택된 키워드
+  let currentKeyword = 'timing';
+
+  // 키워드 텍스트 업데이트 함수
+  function updateKeywordText(keyword) {
+    const textArea = document.getElementById('step4Text');
+    if (!textArea) return;
+
+    // 선택된 장면 데이터에서 이미지 경로 가져오기
+    let imgSrc = null;
+    
+    // 전역 변수에서 선택된 장면 정보 가져오기
+    if (window.selectedSceneData && window.selectedSceneData.img) {
+      imgSrc = window.selectedSceneData.img;
+    }
+    
+    // Step 3의 이미지 경로 사용 (대체 방법)
+    if (!imgSrc) {
+      const step3Image = document.getElementById('step3Image');
+      if (step3Image && step3Image.src) {
+        // 절대 경로에서 상대 경로 추출
+        const fullPath = step3Image.src;
+        // 여러 패턴으로 시도
+        let match = fullPath.match(/img\/alt\/fmr\/[^"']+\.png/);
+        if (!match) {
+          match = fullPath.match(/img\/alt\/[^/]+\/[^"']+\.png/);
+        }
+        if (match) {
+          imgSrc = match[0];
+        } else {
+          // 파일명만 추출하여 경로 재구성
+          const fileName = fullPath.split('/').pop();
+          if (fileName) {
+            imgSrc = 'img/alt/fmr/' + fileName;
+          }
+        }
+      }
+    }
+    
+    // Step 2에서 선택한 장면 정보 사용 (최후의 수단)
+    if (!imgSrc) {
+      const selectedCard = document.querySelector('.scene-card.is-selected');
+      if (selectedCard) {
+        imgSrc = selectedCard.dataset.img;
+      }
+    }
+
+    if (!imgSrc) {
+      textArea.innerHTML = '장면을 선택해주세요.';
+      return;
+    }
+
+    // 해당 키워드 텍스트 가져오기
+    const guide = keywordGuides[imgSrc];
+    if (guide && guide[keyword]) {
+      textArea.innerHTML = guide[keyword];
+    } else {
+      // 기본 텍스트 (임시)
+      const defaultTexts = {
+        timing: '타이밍: 곡의 특정 구간에서 발생하는 타이밍 정보입니다.',
+        action: '동작: 멤버들의 주요 동작과 움직임을 설명합니다.',
+        atmosphere: '분위기: 무대의 전체적인 분위기와 감성을 전달합니다.',
+        lighting: '조명: 조명의 색상, 밝기, 효과를 설명합니다.',
+        member: '멤버: 멤버들의 위치와 역할을 설명합니다.'
+      };
+      textArea.innerHTML = defaultTexts[keyword] || '키워드를 선택하면 가이드라인이 표시됩니다.';
+    }
+  }
+
+  // Step 4 키워드 버튼 클릭 이벤트
+  document.addEventListener('DOMContentLoaded', () => {
+    const step4Filter = document.querySelector('.step4__filter');
+    if (step4Filter) {
+      step4Filter.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-keyword]');
+        if (!btn) return;
+
+        // 모든 버튼에서 활성 상태 제거
+        step4Filter.querySelectorAll('.step4__pill').forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+
+        // 클릭한 버튼 활성화
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-selected', 'true');
+
+        // 키워드 텍스트 업데이트
+        currentKeyword = btn.dataset.keyword;
+        updateKeywordText(currentKeyword);
+      });
+    }
+
+    // 초기 키워드 텍스트 설정 (Step 4가 표시될 때는 Step 3에서 호출됨)
+    // Step 4가 이미 표시되어 있으면 초기 텍스트 설정
+    const step4Section = document.getElementById('step4');
+    if (step4Section && step4Section.style.display !== 'none') {
+    updateKeywordText('timing');
+    }
+  });
+</script>
+
+<script>
+  /* Step 4 다음 단계 버튼 클릭 시 Step 5 표시 및 스크롤 */
+  document.addEventListener('DOMContentLoaded', () => {
+    const step4NextBtn = document.getElementById('step4NextBtn');
+    const step5Section = document.getElementById('step5');
+    
+    if (step4NextBtn && step5Section) {
+      step4NextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Step 5 표시
+        step5Section.style.display = 'block';
+        // Step 5로 스크롤
+        setTimeout(() => {
+          step5Section.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+          });
+        }, 100);
+      });
+    }
+  });
+
+  /* Step 5 가이드 다시보기 버튼 클릭 시 Step 4로 스크롤 */
+  const step5GuideBtn = document.getElementById('step5GuideBtn');
+  const step4Section = document.getElementById('step4');
+  
+  if (step5GuideBtn && step4Section) {
+    step5GuideBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      step4Section.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    });
+  }
+
+  /* Step 5 입력 완료 버튼 클릭 시 텍스트 확인 및 alt2.html로 이동 */
+  const step5CompleteBtn = document.getElementById('step5CompleteBtn');
+  const step5Textarea = document.getElementById('step5Textarea');
+  const popupModal = document.getElementById('popupModal');
+  const popupModalText = popupModal ? popupModal.querySelector('.popup-modal__text') : null;
+  
+  if (step5CompleteBtn && step5Textarea && popupModal && popupModalText) {
+    step5CompleteBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // 텍스트 입력 확인
+      const textValue = step5Textarea.value.trim();
+      
+      if (!textValue) {
+        // 텍스트가 없으면 팝업 표시
+        popupModalText.innerHTML = '대체 텍스트를 작성 후<br>입력 완료 버튼을 눌러주세요.';
+        popupModal.style.display = 'flex';
+        return;
+      }
+      
+      // 텍스트가 있으면 alt2.html로 이동
+      window.location.href = 'alt2.html';
+    });
+  }
+</script>
+  
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="img/index/logo.svg" alt="senstage">
+      </div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>WEB SERVICE</h4>
+          <ul>
+            <li>무대 ALT 서비스</li>
+            <li>햅틱 디바이스</li>
+            <li>티켓 센스</li>
+            <li>브랜드 서비스</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>CONTACT US</h4>
+          <p><span class="ft-label">Tel.</span> 043-229-8660</p>
+          <p><span class="ft-label">E-mail.</span> senstage@gmail.com</p>
+        </div>
+        <div class="footer-col">
+          <h4>SOCIAL</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/senstage2025" aria-label="Instagram" class="soc soc-ig" target="_blank" rel="noopener noreferrer"></a>
+            <a href="#" aria-label="Threads" class="soc soc-threads"></a>
+            <a href="#" aria-label="Facebook" class="soc soc-fb"></a>
+            <a href="#" aria-label="X" class="soc soc-x"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">Copyright © SENSTAGE All right reserved.</div>
+  </footer>
+
+</body>
+</html>

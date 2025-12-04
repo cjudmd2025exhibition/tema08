@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>티켓 센스 | senstage</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/sstglogo.ico" sizes="any">
+</head>
+<body>
+      <!-- 상단 네비게이션 -->
+  <div class="nav-wrap">
+    <header class="navbar" role="navigation" aria-label="상단 내비게이션">
+      <div class="navbar__inner">
+        <a class="logo" href="index.html">
+          <img src="img/index/logo.svg" alt="senstage" height="40" />
+        </a>
+  
+        <nav class="nav" aria-label="주 메뉴">
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="alt.html">무대 ALT 서비스</a></li>
+            <li class="menu__item"><a class="menu__link" href="haptic.html">햅틱 디바이스</a></li>
+            <li class="menu__item"><a class="menu__link" href="app.html">티켓 센스</a></li>
+  
+            <li class="menu__item dropdown">
+              <a href="brand_service.html" class="menu__btn" data-dropdown-toggle aria-haspopup="true" aria-expanded="false">
+                브랜드 서비스
+                <span class="chev" aria-hidden="true">▾</span>
+              </a>
+              <div class="dropdown__panel" role="menu" aria-label="브랜드 서비스 하위메뉴">
+                <a role="menuitem" href="brand_vision.html" class="dropdown__link">브랜드 비전</a>
+                <a role="menuitem" href="brand_synesthesia.html" class="dropdown__link">시네스티아</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+    <!-- Hero -->
+<section class="hero" style="background-image: url('img/app/hero.png');" role="banner" aria-label="앱 서비스 소개">
+    <div class="hero__inner">
+      <h1 class="hero__title">티켓 센스</h1>
+      <p class="hero__desc">
+        복잡하고 어려운 콘서트 예매 시스템을 단순화하고, 도움을 받아
+        <br>시각장애인 팬들도 쉽게 좌석을 예매할 수 있도록 돕는 앱 서비스입니다.
+      </p>
+    </div>
+  </section>
+  
+  <!-- App CTA Section -->
+  <section class="app-cta" aria-label="앱 핵심 기능 소개">
+    <div class="app-cta__inner">
+      <h2 class="app-cta__title">함께 하고 싶은<br>콘서트를 놓치지 않도록</h2>
+      <p class="app-cta__desc">공연 티켓팅, 더 이상 혼자 고민하지 않아도 됩니다.</p>
+
+      <ul class="app-cta__grid">
+        <li class="app-cta__card">
+          <img class="app-cta__icon" src="img/app/ticketsense.png" alt="티켓팅 도우미 아이콘">
+          <div class="app-cta__text">
+            <h3>티켓팅 도우미</h3>
+            <p>장애인 팬과 1:1로 매칭된 도우미가 예매를 도와
+              <br>공연 좌석 구매를 쉽게 할 수 있도록 지원합니다.</p>
+          </div>
+        </li>
+        <li class="app-cta__card">
+          <img class="app-cta__icon" src="img/app/remind.png" alt="공연 리마인드 아이콘">
+          <div class="app-cta__text">
+            <h3>공연 리마인드</h3>
+            <p>관심 공연의 예매 일정과 정보를 챙겨주어
+              <Br>중요한 공지를 놓치지 않게 도와줍니다.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  
+
+  <!-- Ticket Flow Section -->
+  <section class="ticket-flow" aria-label="티켓팅 단계 안내">
+    <div class="ticket-flow__inner">
+      <h2 class="ticket-flow__title">기존의 콘서트 티켓 예매 절차는<br>이렇게나 복잡합니다.</h2>
+      <div class="ticket-flow__stage">
+        <img class="ticket-flow__center" src="img/app/ticket.png" alt="티켓 아이콘">
+        <ul class="ticket-flow__steps">
+          <li class="step step--1">
+            <img src="img/app/id.png" alt="본인인증">
+            <span>본인인증</span>
+          </li>
+          <li class="step step--2">
+            <img src="img/app/membership.png" alt="팬클럽 인증">
+            <span>팬클럽 인증</span>
+          </li>
+          <li class="step step--3">
+            <img src="img/app/click.png" alt="예매처 접속">
+            <span>예매처 접속</span>
+          </li>
+          <li class="step step--4">
+            <img src="img/app/sit.png" alt="구역 좌석 선택">
+            <span>구역 좌석 선택</span>
+          </li>
+          <li class="step step--5">
+            <img src="img/app/date.png" alt="관람일 회차 선택">
+            <span>관람일 회차 선택</span>
+          </li>
+          <li class="step step--6">
+            <img src="img/app/captcha.png" alt="자동입력방지문자">
+            <span>자동입력방지문자</span>
+          </li>
+          <li class="step step--7">
+            <img src="img/app/address.png" alt="배송지 선택">
+            <span>배송지 선택</span>
+          </li>
+          <li class="step step--8">
+            <img src="img/app/payment.png" alt="결제 진행">
+            <span>결제 진행</span>
+          </li>
+        </ul>
+      </div>
+      <p class="ticket-flow__foot">스크린 리더기로 인한 딜레이 없이 예매가 가능한<br>비장애인들에게도 길고 복잡한 과정으로 이루어져 있습니다.</p>
+    </div>
+  </section>
+  <script>
+    (function(){
+      var section = document.querySelector('.ticket-flow');
+      if(!section || !('IntersectionObserver' in window)) return;
+      var steps = Array.prototype.slice.call(section.querySelectorAll('.ticket-flow .step'));
+      var order = ['step--1','step--2','step--3','step--4','step--5','step--6','step--7','step--8'];
+      steps.sort(function(a,b){ return order.indexOf(a.classList[1]) - order.indexOf(b.classList[1]); });
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            steps.forEach(function(step, idx){
+              setTimeout(function(){ step.classList.add('is-show'); }, idx * 180);
+            });
+            io.unobserve(section);
+          }
+        });
+      }, { threshold: 0.25 });
+      io.observe(section);
+    })();
+  </script>
+
+  <!-- Simple Steps Section -->
+  <section class="app-steps" aria-label="세 단계 안내">
+    <div class="app-steps__inner">
+      <h2 class="app-steps__title">단 세 단계 만에!</h2>
+
+      <div class="app-steps__track" aria-hidden="true"></div>
+
+      <ul class="app-steps__list">
+        <li class="step-item">
+          <div class="step-bubble">
+            <img src="img/app/step1.png" alt="공연 정보 입력 아이콘">
+          </div>
+          <span class="step-num">1</span>
+          <p class="step-label">공연 정보 입력</p>
+        </li>
+        <li class="step-item">
+          <div class="step-bubble">
+            <img src="img/app/step2.png" alt="티켓 예매 도우미 매칭 아이콘">
+          </div>
+          <span class="step-num">2</span>
+          <p class="step-label">티켓 예매 도우미 매칭</p>
+        </li>
+        <li class="step-item">
+          <div class="step-bubble">
+            <img src="img/app/step3.png" alt="티켓 예매 완료 아이콘">
+          </div>
+          <span class="step-num">3</span>
+          <p class="step-label">티켓 예매 완료</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <script>
+    (function(){
+      var section = document.querySelector('.app-steps');
+      if(!section || !('IntersectionObserver' in window)) return;
+      var bubbles = Array.prototype.slice.call(section.querySelectorAll('.step-bubble'));
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            bubbles.forEach(function(bubble, idx){
+              setTimeout(function(){ bubble.classList.add('show'); }, idx * 200);
+            });
+            io.unobserve(section);
+          }
+        });
+      }, { threshold: 0.25 });
+      io.observe(section);
+    })();
+  </script>
+
+  <!-- Phone Showcase Section -->
+  <section class="app-phone" aria-label="앱 서비스 소개">
+    <div class="app-phone__inner">
+      <h2 class="app-phone__heading">함께 하고 싶은 콘서트를 놓치지 않도록</h2>
+      <div class="app-phone__grid">
+        <div class="app-phone__text">
+          <span class="app-phone__kicker">티켓 예매 도우미 서비스</span>
+          <h2 class="app-phone__title">
+            시각장애인들도<br>
+            티켓팅이 가능해집니다.
+          </h2>
+          <p class="app-phone__desc">
+            긴 예매 대기, 복잡하고 작은 좌석 선택 버튼,<br>
+            딜레이 되는 스크린 리더 기능으로부터 방해 받지 않고<br>
+            손 쉬운 티켓 예매가 가능합니다.
+          </p>
+        </div>
+        <div class="app-phone__image">
+          <img src="img/app/phone1.png" alt="앱 화면 목업">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- App Detail Steps Section (moved to bottom) -->
+  <section class="app-detail" aria-label="티켓 센스 이용 단계 상세">
+    <div class="app-detail__inner">
+      <!-- Row 1: Left text, Right mock -->
+      <div class="detail-row">
+        <div class="detail-text">
+          <span class="detail-kicker">공연 정보 입력</span>
+          <h3 class="detail-title">예매를 원하는 공연의<br>정보를 입력하세요.</h3>
+          <p class="detail-desc">공연 예매 오픈 날짜, 시간, 공연 일정 및<br>원하는 구역과 좌석 등 예매에 필요한 정보들을<br>폼에 입력해 제출하세요.</p>
+        </div>
+        <div class="detail-mock" aria-hidden="true"></div>
+      </div>
+
+      <!-- Row 2: Left mock, Right text -->
+      <div class="detail-row">
+        <div class="detail-mock" aria-hidden="true"></div>
+        <div class="detail-text">
+          <span class="detail-kicker">티켓팅 도우미 매칭</span>
+          <h3 class="detail-title">예매를 도와줄<br>도우미를 연결합니다.</h3>
+          <p class="detail-desc">작성 후 제출한 폼의 스케줄에 맞춰<br>티켓 예매를 도울 도우미를 매칭합니다.</p>
+        </div>
+      </div>
+
+      <!-- Row 3: Left text, Right mock -->
+      <div class="detail-row">
+        <div class="detail-text">
+          <span class="detail-kicker">신뢰도 평가</span>
+          <h3 class="detail-title">도우미의 활동을 평가하고,<br>신뢰도를 확인하세요.</h3>
+          <p class="detail-desc">티켓 예매가 완료된 뒤,<br>도우미와 신청자에 대한 후기를 남길 수 있습니다.</p>
+        </div>
+        <div class="detail-mock" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recall Moments Section (moved to bottom) -->
+  <section class="recall-section" aria-label="추억 회상 섹션">
+    <div class="recall-section__bg"></div>
+    <div class="recall__inner">
+      <h2 class="recall__heading">최애와 함께했던 순간을<br>다시 추억할 수 있도록</h2>
+      <div class="recall__grid">
+        <div class="recall__text">
+          <span class="recall__kicker">햅틱 디바이스 블루투스 연동</span>
+          <h3 class="recall__title">무대 영상으로 공연의 감동을<br>다시 느껴 보세요.</h3>
+          <p class="recall__desc">재관람 하고 싶은 무대 영상을 골라<br>진동으로 퍼포먼스를 느껴 보세요.</p>
+        </div>
+        <div class="recall__image">
+          <img src="img/app/phone2.png" alt="앱 화면 목업">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta" aria-label="마지막 호출 섹션">
+    <div class="final-cta__inner">
+      <h2 class="final-cta__title">지금 바로 앱스토어에서<br>티켓 센스를 다운 받으세요.</h2>
+      <div class="final-cta__actions">
+        <a href="#" class="final-cta__btn" role="button">App Store</a>
+        <a href="#" class="final-cta__btn" role="button">Google Play</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="img/index/logo.svg" alt="senstage">
+      </div>
+      <div class="footer-columns">
+        <div class="footer-col">
+          <h4>WEB SERVICE</h4>
+          <ul>
+            <li>무대 ALT 서비스</li>
+            <li>햅틱 디바이스</li>
+            <li>티켓 센스</li>
+            <li>브랜드 서비스</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>CONTACT US</h4>
+          <p><span class="ft-label">Tel.</span> 043-229-8660</p>
+          <p><span class="ft-label">E-mail.</span> senstage@gmail.com</p>
+        </div>
+        <div class="footer-col">
+          <h4>SOCIAL</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/senstage2025" aria-label="Instagram" class="soc soc-ig" target="_blank" rel="noopener noreferrer"></a>
+            <a href="#" aria-label="Threads" class="soc soc-threads"></a>
+            <a href="#" aria-label="Facebook" class="soc soc-fb"></a>
+            <a href="#" aria-label="X" class="soc soc-x"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">Copyright © SENSTAGE All right reserved.</div>
+  </footer>
+
+</body>
+</html>
